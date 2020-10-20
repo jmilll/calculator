@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class='calc-grid'>
+        <div id= "output">
+            <div id="previous-operand"></div>
+            <div id="current-operand">0</div>
+        </div>
+        <button data-numkey class= "numbers" value="7">7</button>
+        <button data-numkey class= "numbers" value="8">8</button>
+        <button data-numkey class= "numbers" value="9">9</button>
+        <button data-numkey class= "numbers" value="4">4</button>
+        <button data-numkey class= "numbers" value="5">5</button>
+        <button data-numkey class= "numbers" value="6">6</button>
+        <button data-numkey class= "numbers" value="1">1</button>
+        <button data-numkey class= "numbers" value="2">2</button>
+        <button data-numkey class= "numbers" value="3">3</button>
+        <button data-numkey class= "numbers span-two" value="0">0</button>
+        <button data-numkey class= "numbers" value=".">.</button>
+    
+        <button data-numkey class ="operator" id='add-button' value="+">+</button>
+        <button data-numkey class ="operator" id='subtract-button' value="-">-</button>
+        <button data-numkey class ="operator" id='multiply-button' value="*">*</button>
+        <button data-numkey class ="operator" id='divide-button' value="/">/</button>
+        <button data-numkey class ="other-operator" id='clear-button' value="ac">AC</button>
+        <button data-numkey class ="other-operator" id='delete-button' value="del">DEL</button>
+        <button data-numkey class ="other-operator" id='equals-button' value="=">=</button>
+      </div>  
+<script src="script.js"></script> 
+</body>
+</html>
