@@ -82,12 +82,13 @@ const calculator = new Calculator(previousOperandText, currentOperandText);
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
+        // to make it so you cant add to an operation result
         if(calculator.previousOperand === "" &&
             calculator.currentOperand !== "" &&
             calculator.readyToReset) {
                 calculator.currentOperand = "";
                 calculator.readyToReset = false;
-        }
+        }//
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
     });
@@ -121,7 +122,13 @@ function keyPressEvent (e) {
     let keyCode = e.keyCode;
     //console.log(keyCode);
     let numCode = String.fromCharCode(e.keyCode)
-    
+    // to make it so you cant add to an operation result
+    if(calculator.previousOperand === "" &&
+        calculator.currentOperand !== "" &&
+        calculator.readyToReset) {
+        calculator.currentOperand = "";
+        calculator.readyToReset = false;
+    } //
     if ( keyCode >= 48 && keyCode <= 57) {
         calculator.appendNumber(numCode);
         calculator.updateDisplay();
